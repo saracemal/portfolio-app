@@ -4,14 +4,14 @@ import styled from "styled-components";
 function Footer() {
     return (
         <Wrapper>
-            created w/ 💟 by Sara Cemal 
+            created with 💟 by Sara Cemal 
         </Wrapper>
     )
 }
 
 export default Footer;
 
-const Wrapper = style.div`
+const Wrapper = styled.div`
 text-align: center;
 `
 

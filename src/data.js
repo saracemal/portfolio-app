@@ -1,7 +1,7 @@
-projects = {
+// projects = {
 
-}
+// }
 
-blogs = {
-    
-}
+// blogs = {
+
+// }

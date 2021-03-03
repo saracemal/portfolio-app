@@ -1,19 +1,18 @@
 import React from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
-import './data.js';
+// import styled from "styled-components";
+import HomeNav from "./HomeNav"
+import Footer from "./Footer"
+import InfoSection from "./InfoSection"
 
 function HomePage() {
     return (
-        <Wrapper>
-            <Switch>
-                <Route exact path="/">
-                </Route>
-                <Route exact path="/projects">
-                </Route>
-                <Route exact path="/resume">
-                </Route>
-            </Switch>
-        </Wrapper>
+        <div>
+        <HomeNav />
+            <h1>Home Page!</h1>
+        <InfoSection />
+        <Footer />
+        </div>
     )
 }
 
+export default HomePage;
