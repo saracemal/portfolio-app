@@ -3,6 +3,7 @@ import React from "react";
 import HomeNav from "./HomeNav"
 import Footer from "./Footer"
 import InfoSection from "./InfoSection"
+import Skills from "./Skills"
 
 function HomePage() {
     return (
@@ -10,6 +11,7 @@ function HomePage() {
         <HomeNav />
             <h1>Home Page!</h1>
         <InfoSection />
+        <Skills />
         <Footer />
         </div>
     )
