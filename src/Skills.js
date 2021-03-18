@@ -4,7 +4,8 @@ import styled from "styled-components";
 // adding icons? 
 function Skills() {
     return (
-        <H3>skills will be here</H3>
+        <H3>Skills:</H3>
+        
     )
 }
 
