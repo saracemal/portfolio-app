@@ -6,8 +6,12 @@ import ResumePage from "./ResumePage";
 import './data';
 
 function App() {
+  //fetch for projects right here 
     return (
             <Switch>
+                <Route exact path="/">
+                  <HomePage />
+                </Route>
                 <Route exact path="/">
                   <HomePage />
                 </Route>

@@ -4,14 +4,15 @@ import HomeNav from "./HomeNav"
 import Footer from "./Footer"
 import InfoSection from "./InfoSection"
 import Skills from "./Skills"
+import ProjectPage from "./ProjectPage"
 
 function HomePage() {
     return (
         <div>
         <HomeNav />
-            <h1>Home Page!</h1>
         <InfoSection />
         <Skills />
+        <ProjectPage />
         <Footer />
         </div>
     )

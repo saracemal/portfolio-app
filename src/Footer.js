@@ -4,7 +4,7 @@ import styled from "styled-components";
 function Footer() {
     return (
         <Wrapper>
-            created with 💟 by Sara Cemal 
+            <Text>created with 💟 by Sara Cemal</Text>
         </Wrapper>
     )
 }
@@ -12,9 +12,11 @@ function Footer() {
 export default Footer;
 
 const Wrapper = styled.div`
-text-align: center;
+    text-align: center;
 `
 
-// const Text = style.
-// change the color and maybe even font?
+const Text = styled.p`
+    font-family: 'Space Mono', monospace;
+`
+
 

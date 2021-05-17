@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+p {
+  font-family: 'Space Mono', monospace;
+}
+
+h1 {
+  font-family: 'Kosugi Maru', sans-serif;
+}
