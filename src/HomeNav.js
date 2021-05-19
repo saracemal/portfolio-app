@@ -1,18 +1,28 @@
 import React from "react";
-import Navbar from 'react-bootstrap/Navbar'
+import './NavBar.css'
+import styled from 'styled-components'
 
-function HomeNav() {
+
+// find photos for the links 
+function HomeNav({sticky}) {
     return (
-        <Navbar sticky="top" >
-            <Navbar.Brand href="/">Sara Cemal</Navbar.Brand>
-            <ul className="navbar--link">
-            <li className="navbar--link-item" href="https://www.linkedin.com/in/saracemal">LinkedIn</li>
-            <li className="navbar--link-item" href="https://github.com/saracemal">GitHub</li>
-            <li className="navbar--link-item" href="https://saracemal.medium.com">Medium</li>
-            <li className="navbar--link-item" href="/resume">Resume</li>
-            </ul>
-        </Navbar>
+        <nav className={sticky ? "navbar navbar-sticky" : "navbar"}>
+        <div className="navbar--logo-holder">
+        {sticky ? <H1>sara cemal 🐞</H1> : null}
+        <H1>sara cemal 🐞</H1>
+        </div>
+        <ul className="navbar--link">
+        <li className="navbar--link-item">LinkedIn</li>
+        <li className="navbar--link-item">Github</li>
+        <li className="navbar--link-item">Medium</li>
+        <li className="navbar--link-item">Resume</li>
+        </ul>
+    </nav>
     )
 }
 
 export default HomeNav;
+
+const H1 = styled.h1`
+font-family: 'Kosugi Maru', sans-serif;
+`

@@ -1,27 +1,31 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
 import HomePage from "./HomePage"
-import ProjectPage from "./ProjectPage";
-import ResumePage from "./ResumePage";
+import HomeNav from "./HomeNav"
 import './data';
+import UseSticky from "./UseSticky.js"
 
 function App() {
+  const { isSticky, element } = UseSticky()
   //fetch for projects right here 
     return (
-            <Switch>
-                <Route exact path="/">
-                  <HomePage />
-                </Route>
-                <Route exact path="/">
-                  <HomePage />
-                </Route>
-                <Route exact path="/projects">
-                  <ProjectPage />
-                </Route>
-                <Route exact path="/resume">
-                  <ResumePage />
-                </Route>
-            </Switch>
+        <div>
+          <HomeNav sticky={isSticky} />
+          <HomePage element={element} />
+        </div>
+            // <Switch>
+            //     <Route exact path="/">
+            //       <HomePage />
+            //     </Route>
+            //     <Route exact path="/">
+            //       <HomePage />
+            //     </Route>
+            //     <Route exact path="/projects">
+            //       <ProjectPage />
+            //     </Route>
+            //     <Route exact path="/resume">
+            //       <ResumePage />
+            //     </Route>
+            // </Switch>
         
     )
 }
