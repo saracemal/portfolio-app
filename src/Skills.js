@@ -9,7 +9,10 @@ function Skills() {
     return (
         <Container>
         <H3>skills:</H3>
-    
+            - JavaScript
+            - TypeScript
+            - React
+            - Ruby on Rails 
         </Container>
     )
 }
