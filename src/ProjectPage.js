@@ -26,4 +26,6 @@ const H3 = styled.h3`
     font-family: 'Kosugi Maru', sans-serif;
 `
 
+
+
 export default ProjectPage;
