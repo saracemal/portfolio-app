@@ -12,7 +12,10 @@ function Skills() {
             - JavaScript
             - TypeScript
             - React
-            - Ruby on Rails 
+            - Ruby on Rails
+            - HTML/CSS/Sass
+            - Python 
+             
         </Container>
     )
 }
