@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function ProjectPage() {
+function Projects() {
     //insert fetch function here to grab projects
 
     return (
@@ -28,4 +28,4 @@ const H3 = styled.h3`
 
 
 
-export default ProjectPage;
+export default Projects;

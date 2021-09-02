@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 
 // add padding
+// add resume link 
 axios({
     method: "get",
     url: "downloadSamplePDF.php",
