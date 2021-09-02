@@ -1,49 +1,47 @@
 import React from "react";
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { bounce , fadeIn } from 'react-animations';
+
 
 // add padding
 // add resume link 
-axios({
-    method: "get",
-    url: "downloadSamplePDF.php",
-    responseType: "arraybuffer"
-  })
-    .then((response) => {
-      var link = document.createElement("a");
-      link.href = window.URL.createObjectURL(
-        new Blob([response.data], { type: "application/octet-stream" })
-      );
-      link.download = "name_of_file_with_extension";
-  
-      document.body.appendChild(link);
-  
-      link.click();
-      setTimeout(function () {
-        window.URL.revokeObjectURL(link);
-      }, 200);
-    })
-    .catch((error) => {});
 
     
 function InfoSection() {
     return (
         <Container>
-            <H1>hello! I'm Sara Cemal, a full-stack software engineer based in NYC 🌃</H1>
-            <Info>
+            <BouncyDiv><h1>hello! I'm Sara Cemal, a full-stack software engineer based in NYC 🌃</h1></BouncyDiv>
+            <FadeInDiv>
                 <p>What do sociology, neuroscience, and coding have in common? The ability to critically think, analyze, and problem solve until you reach the root of the problem. I enjoy combining my background into passion projects, the best part being that I can create these applications all on my own! </p>
                 <p>Fun facts: I will beat you in a game of Geoguessr, I've created the perfect capsule wardrobe, my YouTube recommended page consists mainly of travel vloggers and tiny desk concerts, and I will always ask for extra spice on my food.</p>
                 <p>looking to connect? find me on <a href="linkedin.com/saracemal">LinkedIn</a></p>
 
-            </Info>
+            </FadeInDiv>
         </Container>
     )
 }
 
 export default InfoSection;
 
+const bounceAnimation = keyframes`${bounce}`;
+
+const BouncyDiv = styled.div`
+  animation: 1s ${bounceAnimation};
+  text-align: center;
+    font-family: 'Kosugi Maru', sans-serif;
+`;
+
+const FadeInAnimation = keyframes`${FadeIn}`;
+
+const FadeInDiv = styled.div`
+    animation: infinite 2s ${FadeInAnimation};
+`;
+
 const Container = styled.div`
-    
-`
+    border-style: none;
+    height: 500px;
+    width: 500px;
+`;
 
 const Info = styled.div`
     text-align: center;
@@ -54,10 +52,7 @@ const Info = styled.div`
     -webkit-backdrop-filter: blur( 6.5px );
     width: 1200px;
     border-radius: 10px;
-`
+`;
 
-const H1 = styled.h1`
-    text-align: center;
-    font-family: 'Kosugi Maru', sans-serif;
-`
+
 
